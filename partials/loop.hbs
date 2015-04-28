@@ -1,0 +1,24 @@
+<ol id="post-list">
+    {{#foreach posts}}
+    <li class="article-list">
+        <article class="hentry">
+            <header>
+                <h5 class="entry-title">
+                    <a href="{{url}}" rel="bookmark"
+                       title="{{title}}">{{
+                        title}}</a>
+                </h5>
+            </header>
+            <footer class="post-info">
+                <div class="published" title="{{date format="YYYY-MM-DD"}}">
+                    {{date format="YYYY-MM-DD"}}
+                </div>
+            </footer>
+            <!-- /.post-info -->
+            <div class="entry-content">{{excerpt words="26"}}</div>
+            <!-- /.entry-content -->
+        </article>
+    </li>
+    {{/foreach}}
+</ol>
+<!-- /#posts-list -->
