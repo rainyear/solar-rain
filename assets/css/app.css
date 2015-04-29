@@ -61,8 +61,8 @@ a:hover {
 h1, h2, h3 {
   color: #cb4b16;
 }
-
-h1 a, h1 a:visited, h1 a:active {
+ 
+h3 a, h3 a:visited, h3 a:active, h1 a, h1 a:visited, h1 a:active {
   color: #cb4b16;
 }
 
@@ -273,6 +273,9 @@ footer#contentinfo {
 ol#post-list {
     padding: 4px;
 }
+div.post-tags {
+  margin-top: 6px;
+}
 li.article-list {
     border-bottom: 1px solid #073642;
     padding-bottom: 5px;
@@ -302,25 +305,6 @@ pre {
   font: 1em Monaco, Courier, Monospace;
   line-height: 1;
 }
-/*
-pre {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 13px/1.4;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding: 12px;
-}
-p > img{
-  padding: 4px;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  border-radius: 0;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-*/
 ul.category-list {
   line-height: 1.5;
 }
@@ -341,7 +325,6 @@ nav.pagination > a.newer-posts {
 nav.pagination > a.older-posts {
   float: right;
 }
-
 div.postbox {
   color: #839496;
 }
