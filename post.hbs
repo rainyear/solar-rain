@@ -4,10 +4,41 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
     <div class="entry-content">
+      <div class="entry-info">
+        <h1>{{title}}</h1>
+        {{author}} · {{date}}
+      </div>
         {{content}}
+      <div class="end-article">
+          {{#if tags}}
+            <span class="am-icon-tags"></span>
+            {{#tags}}
+            {{/tags}}
+          {{/if}}
+          <p>- END -</p>
+      </div>
+      <div class="clear" style="clear:both"></div>
     </div>
-    <div class="end-article"><b>- END -</b></div>
-
+    <hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
+    <div class="neighbors">
+        <ul class="pager">
+            {{#prev_post}}
+            <li class="prev am-pagination-prev">
+                <a href="{{url}}" rel="prev" title="prev post">
+                  &lArr; {{title}}
+                </a>
+            </li>
+            {{/prev_post}}
+            {{#next_post}}
+            <li class="next am-pagination-next">
+                <a href="{{url}}" rel="next" title="next post">
+                  {{title}} &rArr;
+                </a>
+            </li>
+            {{/next_post}}
+        </ul>
+        <div style="clear: both"></div>
+    </div>
     <hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
     <div class="asset-footer">
         <div class="panel-heading">
