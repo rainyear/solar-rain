@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "fav-r.png"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="{{asset "/css/amazeui.min.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/solarized_dark.css"}}" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+<header class="am-g my-head">
+  <div class="am-u-sm-12 am-article">
+    <h1 class="am-article-title">
+      <a href="/" title="Home">
+        <img class="avatar" src="{{@blog.logo}}"/>
+      </a>
+    </h1>
+    <p class="am-article-meta">rainy.im</p>
+  </div>
+</header>
+<hr class="am-article-divider"/>
+<div class="am-g am-g-fixed">
+  <div class="am-u-md-9 am-u-md-push-3">
+    <div class="am-g">
+      <div class="am-u-sm-11 am-u-sm-centered">
+        <div class="am-cf am-article">
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{navigation}}
+</div>
+<footer id='contentinfo' class="my-footer">
+        <p>
+            Powered by <a href="http://ghost.org/">Ghost</a>,
+            Theme created by <a href="http://rainy.im">rainy</a>.
+        </p>
+</footer>
+<!--[if (gte /theIE 9)|!(IE)]><!-->
+<script src="{{asset "js/jquery.min.js"}}"></script>
+<script src="{{asset "js/amazeui.min.js"}}"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39210186" charset="UTF-8"></script>
+{{ghost_foot}}
+</body>
+</html>

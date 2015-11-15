@@ -1,0 +1,15 @@
+<div class="am-u-md-3 am-u-md-pull-9 my-sidebar">
+    <div class="am-offcanvas" id="sidebar">
+      <div class="am-offcanvas-bar">
+        <ul class="am-nav">
+          {{#foreach navigation}}
+          <li><a href="{{url absolute="true"}}" target="_blank"><span class="am-icon-lg am-icon-{{label}}"></span></a></li>
+          {{/foreach}}
+       </ul>
+      </div>
+    </div>
+  </div>
+  <a href="#sidebar" class="am-btn am-btn-sm am-icon-bars am-show-sm-only my-button" data-am-offcanvas><span class="am-sr-only">侧栏导航</span></a>
+</div>
+
+
