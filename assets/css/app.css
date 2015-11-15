@@ -150,7 +150,7 @@ ol, ul { list-style:none;  }
 }
 
 .my-button {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   border-radius: 0;
